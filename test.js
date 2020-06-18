@@ -109,7 +109,8 @@ downl.onclick = function() {
 
 function fbs_click(TheImg) {
     u=TheImg.src;
-    console.log("url value is: ", url);
+    console.log("url value is: ", url.slice(5, -1));
+    um = url.slice(5, -1);
     // var image = new Image();
     // image.src = 'data:image/png;base64,iVBORw0K...';
     // document.body.appendChild(image);
@@ -117,7 +118,7 @@ function fbs_click(TheImg) {
     t=TheImg.getAttribute('alt');
     console.log("T value is: ", t);
     // window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
-    window.open('http://www.facebook.com/sharer.php?href='+encodeURIComponent(url)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
+    window.open('http://www.facebook.com/sharer.php?href='+encodeURIComponent(um)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
     
 }
 
